@@ -1,0 +1,8 @@
+---
+- name: Starting the deployment
+  hosts: webapp
+  gather_facts: false
+  tasks:
+   - name: Include role for apache installation
+     include_role:
+         name: installApache
