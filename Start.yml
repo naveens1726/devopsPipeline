@@ -1,5 +1,7 @@
 ---
 - name: Starting the deployment
+  become: true
+  become_method: sudo
   hosts: webapp
   gather_facts: false
   tasks:
