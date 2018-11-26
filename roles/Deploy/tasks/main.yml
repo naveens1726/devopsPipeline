@@ -7,14 +7,17 @@
 #       any_errors_fatal: true
 
 ### Parameter List
-
+- name: files
+  file: path=/var/www/html state=absent
 - 
-  name: Install Apache2
-  copy:
-    src: files/myweb-0.0.4.war
-    dest: /var/www/html/myweb-0.0.4.war
-- 
-  name: unzip war
-  unarchive:
-     src: /var/www/html/myweb-0.0.4.war
-     dest: /var/www/html/
+  file: path=/var/www/html state=directory
+#- 
+#  name: Deploy war Apache2
+#  copy:
+#    src: files/myweb-0.0.4.war
+#    dest: /var/www/html/myweb-0.0.4.war
+#- 
+#  name: unzip war
+#  unarchive:
+#     src: /var/www/html/myweb-0.0.4.war
+#     dest: /var/www/html/
