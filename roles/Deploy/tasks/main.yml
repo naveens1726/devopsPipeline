@@ -1,5 +1,20 @@
+### Usage of role in the Main playbooks
+# - name: deploy files
+#   hosts: webapp
+#   tasks:
+#     - include_role:
+#           name: Deploy
+#       any_errors_fatal: true
+
+### Parameter List
+
 - 
   name: Install Apache2
   copy:
     src: files/myweb-0.0.4.war
     dest: /var/www/html/myweb-0.0.4.war
+- 
+  name: unzip war
+  unarchive:
+     src: /var/www/html/myweb-0.0.4.war
+     dest: /var/www/html/
