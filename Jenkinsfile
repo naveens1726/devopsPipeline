@@ -4,6 +4,6 @@ node{
   }
   stage('Compile-Package'){
       def M2_Home =  tool name: 'Maven-3', type: 'maven'   
-      sh "${M2_Home}/bin/mvn package"
+      sh "${M2_Home}/bin/mvn package -DskipTests=true"
   }
 }
