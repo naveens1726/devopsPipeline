@@ -8,3 +8,6 @@
    - name: Include role for apache installation
      include_role:
          name: installApache
+   - name: Deploy via ansible
+     include_role:
+         name: Deploy
