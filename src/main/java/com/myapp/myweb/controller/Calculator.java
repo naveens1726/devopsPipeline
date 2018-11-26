@@ -1,4 +1,4 @@
-package in.javahome.myweb.controller;
+package com.myapp.myweb.controller;
 /*
  * 
  */
