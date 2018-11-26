@@ -1,6 +1,6 @@
 node{
   stage('SCM Checkout'){
-    git 'https://github.com/naveens1726/devopsPipeline/new/master'
+    git 'https://github.com/naveens1726/devopsPipeline'
   }
   stage('Compile-Package'){
       def M2_Home =  tool name: 'Maven-3', type: 'maven'   
